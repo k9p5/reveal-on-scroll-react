@@ -1,4 +1,4 @@
-import { ReactElement, CSSProperties } from "react";
+import { ReactNode, CSSProperties } from "react";
 import { Variants, Easing } from "framer-motion";
 import { htmlElements } from "./supported-elements";
 
@@ -27,7 +27,7 @@ export interface IConfig {
  * Defines the properties of the animation component
  */
 export interface IScrollReveal {
-    children: ReactElement | Array<ReactElement>;
+    children: ReactNode;
     /**
      * Specify the animation preset  
      * default: "fade-in"

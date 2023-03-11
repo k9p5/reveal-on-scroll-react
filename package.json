@@ -1,17 +1,23 @@
 {
-  "name": "scroll-reveal-react",
-  "version": "0.0.1",
+  "name": "reveal-on-scroll-react",
+  "version": "0.0.5",
   "description": "Add scroll animation to your React application super fast!",
-  "main": "index.js",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "jsnext:main": "build/index.es.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc && cp package.json README.md ./dist",
-    "publish": "npm publish ./dist"
+    "build": "rollup -c --bundleConfigAsCjs",
+    "publish": "npm publish"
   },
+  "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/konstantin-paulus/scroll-reveal-react.git"
+    "url": "git+https://github.com/konstantin-paulus/reveal-on-scroll-react.git"
   },
+  "files": [
+    "build"
+  ],
   "keywords": [
     "react",
     "animations",
@@ -22,11 +28,16 @@
   "author": "Konstantin Paulus",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/konstantin-paulus/scroll-reveal-react/issues"
+    "url": "https://github.com/konstantin-paulus/reveal-on-scroll-react/issues"
   },
-  "homepage": "https://github.com/konstantin-paulus/scroll-reveal-react#readme",
+  "homepage": "https://github.com/konstantin-paulus/reveal-on-scroll-react#readme",
   "devDependencies": {
     "@types/react": "^18.0.28",
+    "rollup": "^3.19.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.34.1",
     "typescript": "^4.9.5"
   },
   "dependencies": {
