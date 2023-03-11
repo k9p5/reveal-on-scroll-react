@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react",
+    "declaration": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node"
+  },
+  "include": ["src"]
+}
+
