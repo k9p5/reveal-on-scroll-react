@@ -1,22 +1,21 @@
 {
   "name": "reveal-on-scroll-react",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Add scroll animation to your React application super fast!",
-  "main": "build/index.js",
-  "module": "build/index.es.js",
-  "jsnext:main": "build/index.es.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
     "build": "rollup -c --bundleConfigAsCjs",
     "publish": "npm publish"
   },
-  "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/konstantin-paulus/reveal-on-scroll-react.git"
   },
   "files": [
-    "build"
+    "dist"
   ],
   "keywords": [
     "react",
@@ -32,12 +31,13 @@
   },
   "homepage": "https://github.com/konstantin-paulus/reveal-on-scroll-react#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.0.28",
     "rollup": "^3.19.1",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-dts": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-typescript2": "^0.34.1",
     "typescript": "^4.9.5"
   },
   "dependencies": {
